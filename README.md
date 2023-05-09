@@ -3,8 +3,11 @@ Ein Asteroids-Clon mit geladenen Asteroiden und simplen Vektorgrafiken.
 
 # Kurzbeschreibung
 Chargeroids ist zunächst einmal ein Asteroids[1]-Clone in recht rudimentärer/primitiver Vektorgrafikoptik. Ein steuerbares Raumschiff (mehr oder weniger pfeilförmig) lässt sich auf der Spielfläche mit zyklischen Randbedingungen (links raus => rechts rein) steuern. Das Schiff kann sich lediglich drehen und vorwärtsschub produzieren. Um zu bremsen muss eine 180° Drehung vollführt werden und der Vorwärtsschub als Bremse benutzt werden. Außerdem kann das Raumschiff in vorwärtsrichtung mit eingeschränkter Reichweite und Feuerrate schießen.
+
 Zusätzlich erscheinen an zufälligen Positionen mit zufälliger Startgeschwindigkeit "chargeroids". Chargeroids sind Asteroiden, die bei Beschuss unter Berücksichtigung von Impulserhaltung in eine zufällige Anzahl von Fragmenten zerbricht, die wiederum zerstörbar sind. Wird eine kritische Minimalmasse unterschritten gelten chargeroids als zerstört. Bei Kontakt des Raumschiffs mit einem chargeroid verliert der Spieler ein Leben und das Raumschiff wird in der Mitte der Spielfläche temporär unzerstörbar wiederhergestellt.
+
 Das Zusatzfeature im Vergleich zum Original ist, dass die Asteroiden "geladen" (charged) sind. Das heißt, dass sie sich gegenseitig abstoßen und dadurch abhängig von ihrer Verteilung auf der Spielfläche ihre Richtung ändern und beschleunigte Bewegungen ausführen. Die Ladung der Chargeroids wird in sinnvollen Größenordnungen zufällig verteilt und kann anhand der Füllfarbe der Chargeroids abgeschätzt werden. Dies sorgt für eine recht große Dynamik auf dem Spielfeld.
+
 Sind alle chargeroids auf dem Spielfeld eliminiert wird der Schwierigkeitsgrad erhöht. Dies geschieht durch Erhöhung der Anzahl von chargeroids auf der Spielfläche, Erhöhung der maximalen Ladung (und damit der beschleunigenden Kräfte und Dynamik bei Zerstörung eines chargeroids) und durch die Einführung neuer Spezialtypen von chargeroids.
 
 ## Ideen für Spezialtypen:
