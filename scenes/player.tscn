@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxjokcs0chveb"]
+
+[ext_resource type="Texture2D" uid="uid://b0wod2x6s6vey" path="res://gfx/Player.svg" id="1_4ukoc"]
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_fojky"]
+[ext_resource type="Texture2D" uid="uid://bctgqj0h8yc7f" path="res://gfx/ThrustBeam.svg" id="3_aowik"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h7kd3"]
+radius = 49.0
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_fojky")
+
+[node name="PlayerBody" type="Area2D" parent="."]
+
+[node name="PlayerSprite" type="Sprite2D" parent="PlayerBody"]
+texture = ExtResource("1_4ukoc")
+
+[node name="PlayerCollisionShape" type="CollisionShape2D" parent="PlayerBody"]
+shape = SubResource("CircleShape2D_h7kd3")
+
+[node name="ThrustSprite" type="Sprite2D" parent="PlayerBody"]
+z_index = -1
+texture = ExtResource("3_aowik")
+
+[node name="PlayerReloadTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="area_entered" from="PlayerBody" to="." method="_on_player_body_area_entered"]

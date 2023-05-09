@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsgis4oivpuyd"]
+
+[ext_resource type="Script" path="res://scenes/chargeroid.gd" id="1_geh6l"]
+[ext_resource type="Texture2D" uid="uid://c1dsb8kknfbsp" path="res://gfx/chargeroid.svg" id="2_pj54r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vjbm8"]
+radius = 34.0147
+
+[node name="Chargeroid" type="Node2D"]
+script = ExtResource("1_geh6l")
+
+[node name="ChargeroidBody" type="Area2D" parent="."]
+
+[node name="ChargeroidSprite" type="Sprite2D" parent="ChargeroidBody"]
+texture = ExtResource("2_pj54r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChargeroidBody"]
+shape = SubResource("CircleShape2D_vjbm8")
+
+[connection signal="area_entered" from="ChargeroidBody" to="." method="_on_chargeroid_body_area_entered"]

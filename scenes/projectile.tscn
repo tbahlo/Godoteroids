@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqfahxnytxj7d"]
+
+[ext_resource type="Script" path="res://scenes/projectile.gd" id="1_yxpwr"]
+[ext_resource type="Texture2D" uid="uid://nwcdgga50pmh" path="res://gfx/projectile.svg" id="2_22kcw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vglwb"]
+radius = 11.0
+height = 114.0
+
+[node name="Projectile" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_yxpwr")
+initial_speed = 2000
+
+[node name="ProjectileBody" type="Area2D" parent="."]
+
+[node name="ProjectileSprite" type="Sprite2D" parent="ProjectileBody"]
+texture = ExtResource("2_22kcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectileBody"]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_vglwb")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

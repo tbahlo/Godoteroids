@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://7ch034ykr8gi"]
+
+[ext_resource type="PackedScene" uid="uid://cxjokcs0chveb" path="res://scenes/player.tscn" id="1_6ke8c"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_6n6jb"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_6n6jb")
+
+[node name="Player" parent="." instance=ExtResource("1_6ke8c")]
+z_index = 1
+position = Vector2(810, 501)
+thrust = 200
+
+[node name="debug_msg_timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="hit" from="Player" to="." method="_on_player_hit"]
+[connection signal="player_shoots" from="Player" to="." method="_on_player_player_shoots"]
+[connection signal="timeout" from="debug_msg_timer" to="." method="_on_debug_msg_timer_timeout"]

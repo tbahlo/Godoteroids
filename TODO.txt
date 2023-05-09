@@ -1,0 +1,20 @@
+aktuelles TODO:
+
+
+ "version 0.1" (minimal viable product)
+------------------------
+* steuerbaren Spieler implementieren
+* Projektile erstellen (einstellbare Feuerrate, begrenzte Lebensdauer)
+* min. 1 simpel dargestellter, zerstörbarer, geladener chargeroid, der bei Beschuss in 2 Fragmente zerfällt, die ebenfalls geladen interagieren und ein weiteres Mal zerfallen können.
+* Ladungsinteraktion implementieren
+* Kollisionskontrolle über grobe Hitbox mit ja/nein Antwort
+
+
+featureliste "version 0.5" (ziellos spielbar)
+---------------------------------------------
+* kein Menü - Spiel startet direkt
+* 3 Leben - Raumschiff kann zerstört werden
+* Level 1 = 1 chargeroid, Level 2 = 2 chargeroids ...
+* Punktestandsanzeige
+* kein Sound
+
