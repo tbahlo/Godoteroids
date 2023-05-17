@@ -1,14 +1,14 @@
 aktuelles TODO:
 
-
  "version 0.1" (minimal viable product)
 ------------------------
 * steuerbaren Spieler implementieren
 * Projektile erstellen (einstellbare Feuerrate, begrenzte Lebensdauer)
-* min. 1 simpel dargestellter, zerstörbarer, geladener chargeroid, der bei Beschuss in 2 Fragmente zerfällt, die ebenfalls geladen interagieren und ein weiteres Mal zerfallen können.
+* min. 1 simpel dargestellter, zerstörbarer, geladener chargeroid, der bei 
+  Beschuss in 2 Fragmente zerfällt, die ebenfalls geladen interagieren und ein 
+  weiteres Mal zerfallen können.
 * Ladungsinteraktion implementieren
 * Kollisionskontrolle über grobe Hitbox mit ja/nein Antwort
-
 
 featureliste "version 0.5" (ziellos spielbar)
 ---------------------------------------------
@@ -18,3 +18,50 @@ featureliste "version 0.5" (ziellos spielbar)
 * Punktestandsanzeige
 * kein Sound
 
+featureliste "version 1.0" (sinnvoll spielbar - "prinzipiell fertiges Spiel")
+-----------------------------------------------------------------------------
+* Menü mit Titel, "Spiel starten", "Highscores", "Credits", "Spiel beenden"
+* Highscoreliste speichern und anzeigen lassen
+* Effektsounds
+* Kollisionskontrolle über physikalisch motiviertes Feedback - Schüsse 
+  übertragen Impuls auf chargeroid/-fragmente
+* Levelnummer = Anzahl Chargeroids
+
+featureliste "version 2.0" (voll spielbar + sonderfeatures)
+-----------------------------------------------------------
+ich halte gescheite Features für sinnvoller und besser umsetzbar als abgedrehte
+Grafik mit Partikeleffekten usw.
+* min. 3 neue chargeroidklassen aus folgender Liste implementieren: 
+	Pulseroid, Attrakteroid, Emitteroid, Overchargeroid, Clusteroids
+* nach 3 erfolgreichen Levels jeweils eine neue Klasse einführen:
+  Level 4: 1 chargeroids + 1 spezialklasse A
+  Level 5: 2 chargeroids + 1 spezialklasse A
+  Level 6: 3 chargeroids + 1 spezialklasse A
+  Level 7: 1 chargeroids + 1 spezialklasse A + 1 spezialklasse B
+  Level 8: 2 chargeroids + 1 spezialklasse A + 1 spezialklasse B
+  Level 9: 3 chargeroids + 1 spezialklasse A + 1 spezialklasse B
+* min 3 Powerups aus folgender (nach Priorität geordneten) Liste implementieren:
+	 +1-Up; +Feuerrate; +Mehrfachschuss; +Schutzschild; +Ladungsschild
+* zusätzliche Hintergrundmusik 
+	(vl. selbst eingespielter Gitarrenriff, oder Keyboardsong? :D)
+
+featureliste "version 3.0" (mit vollen features spielbar und grafisch überarbeitet)
+----------------------------------------------------------------------------------
+* Intro beim Starten des Programms
+* Einführungsanimation beim Starten eines neuen Spiels
+* alle chargeroidklassen implementieren und in Levels einbauen
+* alle Powerups implementieren und in Levels einbauen
+* Grafik überarbeiten: 
+  Explosionen bei Zerstörung von Objekten
+  Partikeleffekte bei Fragmentierung und Zerstörung
+  pulsierende Glow-Effekte proportional zur Ladung der Objekte
+  Erscheinungsbild des Raumschiffs abhängig von Powerups
+  unaufdringliches Hintergrundbild, ggf animiert
+
+featureliste "version 4.0" ("chargeroidHD")
+----------------------------------------------------------------------------------
+Der Status bis zu dem dieses Spiel nie kommen wird.
+* komplette Vektorgrafik ersetzt durch texturierte 3D-Grafiken (das Spiel bleibt 2D)
+* räumlich anmutendes Hintergrundbild mit vorbeifliegenden Asteroiden
+* Explosionen, Projektile usw. beleuchten Umgebung korrekt
+* Weltherrschaft an mich reissen.
